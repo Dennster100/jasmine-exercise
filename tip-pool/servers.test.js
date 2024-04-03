@@ -11,7 +11,10 @@ describe("Servers test (with setup and tear-down)", function() {
     expect(allServers['server' + serverId].serverName).toEqual('Alice');
   });
 
-  afterEach(function() {
-    // teardown logic
+  //deleted the obj asociated with Alice
+  afterEach(function () {
+    delete allServers.server1;
+    const remover = document.querySelector('#server1');
+    remover.remove();
   });
 });
