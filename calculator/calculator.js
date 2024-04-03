@@ -43,7 +43,7 @@ function update() {
 // calculate the monthly payment.  The output should be a string
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
-  let i = (values.rate/100) / 12;
+  let i = (values.rate / 100) / 12;
   let P = values.amount;
   let n = values.years * 12;
   let monthlyRate = (i * P) / (1 - Math.pow((1 + i), -n));
