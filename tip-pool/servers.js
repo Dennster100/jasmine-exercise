@@ -42,3 +42,4 @@ function updateServerTable() {
     serverTbody.append(newTr);
   }
 }
+

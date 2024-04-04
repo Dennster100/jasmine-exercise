@@ -22,5 +22,26 @@ function appendTd(tr, value) {
   let newTd = document.createElement('td');
   newTd.innerText = value;
 
+  
   tr.append(newTd);
+  
+}
+
+function appendDeleteBtn(tr) {
+  let td = document.createElement('td');
+  td.innerHTML = 'X';
+  td.id = 'payment';
+  addDelete(td);
+  tr.append(td);
+  
+
+}
+
+function addDelete(td) {
+  td.addEventListener('click', function (e) {
+    e.preventDefault;
+    e.target.parentElement.remove();
+    updateServerTable();
+  });
+
 }
